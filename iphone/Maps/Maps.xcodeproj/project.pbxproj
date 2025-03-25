@@ -492,6 +492,7 @@
 		ED4DC7792CAEDECC0029B338 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4DC7742CAEDECC0029B338 /* ProductsViewController.swift */; };
 		ED5BAF4B2D688F5B0088D7B1 /* SearchOnMapHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5BAF4A2D688F5A0088D7B1 /* SearchOnMapHeaderView.swift */; };
 		ED5E02142D8B17B600A5CC7B /* ModalPresentationStepsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E02132D8B17B600A5CC7B /* ModalPresentationStepsController.swift */; };
+		ED5E02522D92E33300A5CC7B /* NavigationDashboardView.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED5E02512D92E33300A5CC7B /* NavigationDashboardView.mm */; };
 		ED63CEB92BDF8F9D006155C4 /* SettingsTableViewiCloudSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED63CEB62BDF8F9C006155C4 /* SettingsTableViewiCloudSwitchCell.swift */; };
 		ED70D55C2D5396F300738C1E /* SearchResult.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED70D55A2D5396F300738C1E /* SearchResult.mm */; };
 		ED70D5892D539A2500738C1E /* SearchOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70D5872D539A2500738C1E /* SearchOnMapViewController.swift */; };
@@ -1389,6 +1390,10 @@
 		A630D205207CAA3A00976DEA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		A630D206207CAA5800976DEA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		AA1C7E3D269A2DD600BAADF2 /* EditTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackViewController.swift; sourceTree = "<group>"; };
+		AC4209FF2D79BCEC00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC420A002D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC420A012D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = af; path = af.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		AC420A022D79BCEE00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/LocalizableTypes.strings; sourceTree = "<group>"; };
 		AC420A082D79BDDA00A64AA9 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC420A092D79BDDA00A64AA9 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC420A0A2D79BDDB00A64AA9 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = lt; path = lt.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -1397,10 +1402,6 @@
 		AC420A142D79C2EC00A64AA9 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mt; path = mt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC420A152D79C2EC00A64AA9 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = mt; path = mt.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		AC420A162D79C2ED00A64AA9 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mt; path = mt.lproj/LocalizableTypes.strings; sourceTree = "<group>"; };
-		AC4209FF2D79BCEC00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AC420A002D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AC420A012D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = af; path = af.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		AC420A022D79BCEE00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/LocalizableTypes.strings; sourceTree = "<group>"; };
 		AC79C8912A65AB9500594C24 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
 		B33D21AE20DAF9F000BAD749 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B3E3B4FC20D463B700DA8C13 /* BMCCategoriesHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMCCategoriesHeader.xib; sourceTree = "<group>"; };
@@ -1467,6 +1468,9 @@
 		ED4DC7752CAEDECC0029B338 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		ED5BAF4A2D688F5A0088D7B1 /* SearchOnMapHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOnMapHeaderView.swift; sourceTree = "<group>"; };
 		ED5E02132D8B17B600A5CC7B /* ModalPresentationStepsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationStepsController.swift; sourceTree = "<group>"; };
+		ED5E024F2D92AC9300A5CC7B /* RoutePreviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoutePreviewView.h; sourceTree = "<group>"; };
+		ED5E02502D92E33300A5CC7B /* NavigationDashboardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationDashboardView.h; sourceTree = "<group>"; };
+		ED5E02512D92E33300A5CC7B /* NavigationDashboardView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = NavigationDashboardView.mm; sourceTree = "<group>"; };
 		ED63CEB62BDF8F9C006155C4 /* SettingsTableViewiCloudSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewiCloudSwitchCell.swift; sourceTree = "<group>"; };
 		ED70D5582D5396F300738C1E /* SearchItemType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchItemType.h; sourceTree = "<group>"; };
 		ED70D5592D5396F300738C1E /* SearchResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
@@ -2550,9 +2554,12 @@
 				34AB65FE1FC5AA320078E451 /* MWMiPhoneRoutePreview.xib */,
 				34AB65FF1FC5AA320078E451 /* MWMRoutePreview.h */,
 				34AB65FD1FC5AA320078E451 /* MWMRoutePreview.mm */,
+				ED5E024F2D92AC9300A5CC7B /* RoutePreviewView.h */,
 				34AB65D71FC5AA320078E451 /* RouteManager */,
 				34AB65EC1FC5AA320078E451 /* RoutePreviewStatus */,
 				34AB65D51FC5AA320078E451 /* RouteStartButton.swift */,
+				ED5E02502D92E33300A5CC7B /* NavigationDashboardView.h */,
+				ED5E02512D92E33300A5CC7B /* NavigationDashboardView.mm */,
 			);
 			path = RoutePreview;
 			sourceTree = "<group>";
@@ -4632,6 +4639,7 @@
 				993DF12223F6BDB100AC231A /* UINavigationItemRenderer.swift in Sources */,
 				993DF12B23F6BDB100AC231A /* StyleManager.swift in Sources */,
 				ED43B8BD2C12063500D07BAA /* DocumentPicker.swift in Sources */,
+				ED5E02522D92E33300A5CC7B /* NavigationDashboardView.mm in Sources */,
 				470E1674252AD7F2002D201A /* BookmarksListInfoViewController.swift in Sources */,
 				47B9065521C7FA400079C85E /* NSString+MD5.m in Sources */,
 				ED5BAF4B2D688F5B0088D7B1 /* SearchOnMapHeaderView.swift in Sources */,

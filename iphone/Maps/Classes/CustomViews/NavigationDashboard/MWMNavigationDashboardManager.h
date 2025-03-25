@@ -7,6 +7,8 @@ typedef NS_ENUM(NSUInteger, MWMNavigationDashboardState) {
   MWMNavigationDashboardStateNavigation
 };
 
+@class NavigationDashboardView;
+
 @interface MWMNavigationDashboardManager : NSObject
 
 + (nonnull MWMNavigationDashboardManager *)sharedManager;
