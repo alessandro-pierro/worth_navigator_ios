@@ -4,6 +4,24 @@
 <dict>
 	<key>bookmarks_places</key>
 	<dict>
+		<key>value</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>%d marcadores</string>
+			<key>one</key>
+			<string>%d marcador</string>
+			<key>other</key>
+			<string>%d marcadores</string>
+		</dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@value@</string>
+	</dict>
+	<key>tracks</key>
+	<dict>
 		<key>NSStringLocalizedFormatKey</key>
 		<string>%#@value@</string>
 		<key>value</key>
@@ -13,13 +31,11 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>zero</key>
-			<string>%d marcador</string>
+			<string>%d traxectos</string>
 			<key>one</key>
-			<string>%d marcador</string>
-			<key>many</key>
-			<string>%d marcadors</string>
+			<string>%d traxecto</string>
 			<key>other</key>
-			<string>%d marcadors</string>
+			<string>%d traxectos</string>
 		</dict>
 	</dict>
 	<key>bookmarks_detect_message</key>
@@ -33,33 +49,11 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>zero</key>
-			<string>S'han trobat %d fitxers. Podeu veure'ls després de la conversió.</string>
+			<string>Atopáronse %d arquivos. Veraos despois da conversión.</string>
 			<key>one</key>
-			<string>S'ha trobat %d fitxer. Podeu veure'l després de la conversió.</string>
-			<key>many</key>
-			<string>S'han trobat %d fitxers. Podeu veure'ls després de la conversió.</string>
+			<string>Atopouse %d arquivo. Verao despois da conversión.</string>
 			<key>other</key>
-			<string>S'han trobat %d fitxers. Podeu veure'ls després de la conversió.</string>
-		</dict>
-	</dict>
-	<key>tracks</key>
-	<dict>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%#@value@</string>
-		<key>value</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>d</string>
-			<key>zero</key>
-			<string>%d recorreguts</string>
-			<key>one</key>
-			<string>%d recorregut</string>
-			<key>many</key>
-			<string>%d recorreguts</string>
-			<key>other</key>
-			<string>%d recorreguts</string>
+			<string>Atopáronse %d arquivos. Veraos despois da conversión.</string>
 		</dict>
 	</dict>
 </dict>

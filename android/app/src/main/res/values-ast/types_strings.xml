@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="type.shop.supermarket">Supermercáu</string>
+    <string name="type.shop.chocolate">Chicolatería</string>
+    <string name="type.aeroway.aerodrome">Aeropuertu</string>
+    <string name="type.amenity.atm">Caxeru automáticu</string>
+    <string name="type.aeroway.helipad">Helipuertu</string>
+    <string name="type.shop.tattoo">Estudiu de tatuaxes</string>
+    <string name="type.sport.chess">Axedrez</string>
+    <string name="type.tourism.aquarium">Acuariu</string>
+    <string name="type.tourism">Turismu</string>
+    <string name="type.aeroway.aerodrome.international">Aeropuertu internacional</string>
+    <string name="type.aerialway.cable_car">Teleféricu</string>
+    <string name="type.shop.mall">Centru comercial</string>
+    <string name="type.wheelchair">Siella de ruedes</string>
+</resources>
