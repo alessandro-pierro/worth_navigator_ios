@@ -11,6 +11,8 @@
 #include "base/file_name_utils.hpp"
 #include "base/logging.hpp"
 
+#include <iostream> // Include the I/O library
+
 using namespace power_management;
 
 namespace
@@ -42,7 +44,9 @@ void PowerManager::Load()
 {
   try
   {
+
     FileReader reader(GetConfigPath());
+      
     NonOwningReaderSource source(reader);
 
     coding::DeserializerJson des(source);
