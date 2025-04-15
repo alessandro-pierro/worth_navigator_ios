@@ -1389,6 +1389,10 @@
 		A630D205207CAA3A00976DEA /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		A630D206207CAA5800976DEA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		AA1C7E3D269A2DD600BAADF2 /* EditTrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTrackViewController.swift; sourceTree = "<group>"; };
+		AC4209FF2D79BCEC00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC420A002D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC420A012D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = af; path = af.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		AC420A022D79BCEE00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/LocalizableTypes.strings; sourceTree = "<group>"; };
 		AC420A082D79BDDA00A64AA9 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AC420A092D79BDDA00A64AA9 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lt; path = lt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC420A0A2D79BDDB00A64AA9 /* lt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = lt; path = lt.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -1397,10 +1401,6 @@
 		AC420A142D79C2EC00A64AA9 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mt; path = mt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC420A152D79C2EC00A64AA9 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = mt; path = mt.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		AC420A162D79C2ED00A64AA9 /* mt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = mt; path = mt.lproj/LocalizableTypes.strings; sourceTree = "<group>"; };
-		AC4209FF2D79BCEC00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AC420A002D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AC420A012D79BCED00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = af; path = af.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		AC420A022D79BCEE00A64AA9 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/LocalizableTypes.strings; sourceTree = "<group>"; };
 		AC79C8912A65AB9500594C24 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
 		B33D21AE20DAF9F000BAD749 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		B3E3B4FC20D463B700DA8C13 /* BMCCategoriesHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BMCCategoriesHeader.xib; sourceTree = "<group>"; };
@@ -5240,7 +5240,7 @@
 				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 8PDC488949;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_KEY_CFBundleDisplayName = "Worth Navigator (Debug)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Worth Navigator";
 				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = NO;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Determining your location is necessary for navigation and for saving your recently travelled track.";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -5295,8 +5295,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Z6432XD7L;
-				PRODUCT_BUNDLE_IDENTIFIER = app.organicmaps.tests;
+				DEVELOPMENT_TEAM = 8PDC488949;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = it.safetyisworth.navigator.tests;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Organic Maps (Debug).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Organic Maps (Debug)";
 			};
@@ -5310,8 +5311,9 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9Z6432XD7L;
-				PRODUCT_BUNDLE_IDENTIFIER = app.organicmaps.tests;
+				DEVELOPMENT_TEAM = 8PDC488949;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = it.safetyisworth.navigator.tests;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Organic Maps (Debug).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Organic Maps (Debug)";
 			};
@@ -5323,7 +5325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 9Z6432XD7L;
+				DEVELOPMENT_TEAM = 8PDC488949;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -5340,7 +5342,7 @@
 				);
 				MARKETING_VERSION = 2022.11.17;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = app.organicmaps.debug.widgetextension;
+				PRODUCT_BUNDLE_IDENTIFIER = it.safetyisworth.navigator.debug.widgetextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -5357,7 +5359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 9Z6432XD7L;
+				DEVELOPMENT_TEAM = 8PDC488949;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OMapsWidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OMapsWidgetExtension;
@@ -5369,7 +5371,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 2022.11.17;
-				PRODUCT_BUNDLE_IDENTIFIER = app.organicmaps.widgetextension;
+				PRODUCT_BUNDLE_IDENTIFIER = it.safetyisworth.navigator.widgetextension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

@@ -89,25 +89,27 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 		<key>NSExceptionDomains</key>
+		<dict/>
+	</dict>
+	<key>NSUbiquitousContainers</key>
+	<dict>
+		<key>iCloud.app.organicmaps</key>
 		<dict>
-			<key>omaps.app</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
-			<key>organicmaps.app</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-				<key>NSIncludesSubdomains</key>
-				<true/>
-				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-				<false/>
-			</dict>
+			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+			<true/>
+			<key>NSUbiquitousContainerName</key>
+			<string>OrganicMaps</string>
+			<key>NSUbiquitousContainerSupportedFolderLevels</key>
+			<string>ANY</string>
+		</dict>
+		<key>iCloud.app.organicmaps.debug</key>
+		<dict>
+			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
+			<true/>
+			<key>NSUbiquitousContainerName</key>
+			<string>OrganicMapsDEBUG</string>
+			<key>NSUbiquitousContainerSupportedFolderLevels</key>
+			<string>ANY</string>
 		</dict>
 	</dict>
 	<key>UIAppFonts</key>
@@ -224,28 +226,5 @@
 			</dict>
 		</dict>
 	</array>
-	<key>NSUbiquitousContainers</key>
-	<dict>
-		<key>iCloud.app.organicmaps</key>
-		<dict>
-			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
-			<true/>
-			<key>NSUbiquitousContainerSupportedFolderLevels</key>
-			<string>ANY</string>
-			<key>NSUbiquitousContainerName</key>
-			<string>OrganicMaps</string>
-		</dict>
-		<key>iCloud.app.organicmaps.debug</key>
-		<dict>
-			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
-			<true/>
-			<key>NSUbiquitousContainerSupportedFolderLevels</key>
-			<string>ANY</string>
-			<key>NSUbiquitousContainerName</key>
-			<string>OrganicMapsDEBUG</string>
-		</dict>
-	</dict>
-	<key>NSSupportsLiveActivities</key>
-	<true/>
 </dict>
 </plist>
