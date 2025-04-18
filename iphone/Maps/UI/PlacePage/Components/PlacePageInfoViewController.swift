@@ -357,7 +357,10 @@ class PlacePageInfoViewController: UIViewController {
     }
 
     setupCoordinatesView()
-    setupOpenWithAppView()
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // setupOpenWithAppView()
+    // = = = = = = = = = = = =
   }
 
   private func setupCoordinatesView() {
