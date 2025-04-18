@@ -354,7 +354,7 @@ private:
 
     // In some cases RenderScene, UpdateContextDependentResources can be called before the rendering of
     // the first frame. m_currentZoomLevel will be equal to -1, before ResolveZoomLevel call.
-    return m_currentZoomLevel >= 0;
+    return true;
   }
 
   int GetCurrentZoom() const
