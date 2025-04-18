@@ -2508,11 +2508,17 @@ void Framework::Allow3dMode(bool allow3d, bool allow3dBuildings)
   if (m_drapeEngine == nullptr)
     return;
 
-  if (!m_powerManager.IsFacilityEnabled(power_management::Facility::PerspectiveView))
-    allow3d = false;
-
-  if (!m_powerManager.IsFacilityEnabled(power_management::Facility::Buildings3d))
-    allow3dBuildings = false;
+  // = = = = = = = = = = = =
+  // WORTH NAVIGATOR UPDATE
+  // Disable 3d in every situation
+  // if (!m_powerManager.IsFacilityEnabled(power_management::Facility::PerspectiveView))
+  //   allow3d = false;
+  //
+  // if (!m_powerManager.IsFacilityEnabled(power_management::Facility::Buildings3d))
+  //   allow3dBuildings = false;
+  allow3d = false;
+  allow3dBuildings = false;
+  // = = = = = = = = = = = =
 
   m_drapeEngine->Allow3dMode(allow3d, allow3dBuildings);
 }
