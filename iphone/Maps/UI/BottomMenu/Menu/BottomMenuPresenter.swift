@@ -32,8 +32,15 @@ class BottomMenuPresenter: NSObject {
     self.view = view
     self.interactor = interactor
     self.sections = sections
-    let disableDonate = Settings.donateUrl() == nil
-    self.menuCells = CellType.allCases.filter { disableDonate ? $0 != .donate : true }
+    
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Select only needed CellTypes
+    // let disableDonate = Settings.donateUrl() == nil
+    // self.menuCells = CellType.allCases.filter { disableDonate ? $0 != .donate : true }
+    self.menuCells = [CellType.settings]
+    // = = = = = = = = = = = =
+
     self.cellToHighlight = Self.getCellToHighlight()
     super.init()
   }
