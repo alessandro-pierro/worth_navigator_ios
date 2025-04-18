@@ -32,12 +32,19 @@ final class BMCDefaultViewModel: NSObject {
   }
 
   private func getActions() -> [BMCAction] {
-    var actions: [BMCAction] = [.create]
-    actions.append(.import)
-    if !manager.areAllCategoriesEmpty() {
-      actions.append(.exportAll)
-    }
-    return actions
+    
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // disable all bookmark actions
+    // var actions: [BMCAction] = [.create]
+    // actions.append(.import)
+    // if !manager.areAllCategoriesEmpty() {
+    //   actions.append(.exportAll)
+    // }
+    // return actions
+    // = = = = = = = = = = = =
+    
+    return []
   }
 
   private func getNotifications() -> [BMCNotification] {
