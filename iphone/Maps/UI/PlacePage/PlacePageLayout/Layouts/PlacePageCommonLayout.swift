@@ -101,11 +101,15 @@ class PlacePageCommonLayout: NSObject, IPlacePageLayout {
       }
     }
 
-    viewControllers.append(editBookmarkViewController)
-    if let bookmarkData = placePageData.bookmarkData {
-      editBookmarkViewController.data = .bookmark(bookmarkData)
-      editBookmarkViewController.view.isHidden = false
-    }
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // disable bookmarks
+    // viewControllers.append(editBookmarkViewController)
+    //  if let bookmarkData = placePageData.bookmarkData {
+    //  editBookmarkViewController.data = .bookmark(bookmarkData)
+    //   editBookmarkViewController.view.isHidden = false
+    // }
+    // = = = = = = = = = = = =
 
     if placePageData.infoData != nil {
       viewControllers.append(infoViewController)
