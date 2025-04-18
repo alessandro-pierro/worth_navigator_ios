@@ -115,9 +115,13 @@ class PlacePageCommonLayout: NSObject, IPlacePageLayout {
       viewControllers.append(productsViewController)
     }
 
-    if placePageData.buttonsData != nil {
-      viewControllers.append(buttonsViewController)
-    }
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // disable edit and add place
+    // if placePageData.buttonsData != nil {
+    //   viewControllers.append(buttonsViewController)
+    // }
+    // = = = = = = = = = = = =
 
     placePageData.onBookmarkStatusUpdate = { [weak self] in
       guard let self = self else { return }
