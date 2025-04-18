@@ -111,9 +111,13 @@ class PlacePageCommonLayout: NSObject, IPlacePageLayout {
       viewControllers.append(infoViewController)
     }
 
-    if let productsViewController = productsViewController() {
-      viewControllers.append(productsViewController)
-    }
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // disable products
+    // if let productsViewController = productsViewController() {
+    //  viewControllers.append(productsViewController)
+    // }
+    // = = = = = = = = = = = =
 
     // = = = = = = = = = = = =
     // WORTH NAVIGATOR UPDATE
