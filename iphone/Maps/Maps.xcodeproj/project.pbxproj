@@ -326,6 +326,11 @@
 		6B679E89266BFD0A0074AE2A /* 00_NotoNaskhArabic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B679E88266BFD090074AE2A /* 00_NotoNaskhArabic-Regular.ttf */; };
 		6B9978361C89A316003B8AA0 /* editor.config in Resources */ = {isa = PBXBuildFile; fileRef = 6B9978341C89A316003B8AA0 /* editor.config */; };
 		8C4FB9C72BEFEFF400D44877 /* CarPlayWindowScaleAdjuster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4FB9C62BEFEFF400D44877 /* CarPlayWindowScaleAdjuster.swift */; };
+		8C73FDC02DB310E30066E89E /* WorthMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73FDBC2DB3107D0066E89E /* WorthMap.swift */; };
+		8C73FDC12DB310E30066E89E /* MapHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73FDBD2DB3107D0066E89E /* MapHandler.swift */; };
+		8C73FDC22DB310E30066E89E /* WorthMapHelper.h in Sources */ = {isa = PBXBuildFile; fileRef = 8C73FDBE2DB3107D0066E89E /* WorthMapHelper.h */; };
+		8C73FDC32DB310E30066E89E /* WorthMapHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C73FDBF2DB3107D0066E89E /* WorthMapHelper.mm */; };
+		8C73FDC42DB310E30066E89E /* WorthDeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73FDBA2DB3106C0066E89E /* WorthDeepLinkHandler.swift */; };
 		8CB13C3B2BF1276A004288F2 /* CarplayPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB13C3A2BF1276A004288F2 /* CarplayPlaceholderView.swift */; };
 		99012847243F0D6900C72B10 /* UIViewController+alternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99012846243F0D6900C72B10 /* UIViewController+alternative.swift */; };
 		9901284F244732DB00C72B10 /* BottomTabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99012849244732DB00C72B10 /* BottomTabBarPresenter.swift */; };
@@ -1242,6 +1247,11 @@
 		6B679E88266BFD090074AE2A /* 00_NotoNaskhArabic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "00_NotoNaskhArabic-Regular.ttf"; path = "../../data/00_NotoNaskhArabic-Regular.ttf"; sourceTree = "<group>"; };
 		6B9978341C89A316003B8AA0 /* editor.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = editor.config; path = ../../data/editor.config; sourceTree = "<group>"; };
 		8C4FB9C62BEFEFF400D44877 /* CarPlayWindowScaleAdjuster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlayWindowScaleAdjuster.swift; sourceTree = "<group>"; };
+		8C73FDBA2DB3106C0066E89E /* WorthDeepLinkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorthDeepLinkHandler.swift; sourceTree = "<group>"; };
+		8C73FDBC2DB3107D0066E89E /* WorthMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorthMap.swift; sourceTree = "<group>"; };
+		8C73FDBD2DB3107D0066E89E /* MapHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapHandler.swift; sourceTree = "<group>"; };
+		8C73FDBE2DB3107D0066E89E /* WorthMapHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorthMapHelper.h; sourceTree = "<group>"; };
+		8C73FDBF2DB3107D0066E89E /* WorthMapHelper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WorthMapHelper.mm; sourceTree = "<group>"; };
 		8CB13C3A2BF1276A004288F2 /* CarplayPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarplayPlaceholderView.swift; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* OMaps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OMaps.plist; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		978D4A30199A11E600D72CA7 /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = faq.html; path = ../../data/faq.html; sourceTree = "<group>"; };
@@ -1977,6 +1987,7 @@
 		29B97314FDCFA39411CA2CEA /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				8C73FDB92DB310510066E89E /* WorthExtension */,
 				FA456C4026BDCC8E00B83C20 /* shaders.xcodeproj */,
 				FA36B8011540388B004560CC /* Bookmarks */,
 				3454D7981E07F045004AF2AD /* Categories */,
@@ -2850,6 +2861,26 @@
 				ED1ADA322BC6B1B40029209F /* CarPlayServiceTests.swift */,
 			);
 			path = CarPlay;
+			sourceTree = "<group>";
+		};
+		8C73FDB92DB310510066E89E /* WorthExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8C73FDBB2DB310720066E89E /* WorthMap */,
+				8C73FDBA2DB3106C0066E89E /* WorthDeepLinkHandler.swift */,
+			);
+			path = WorthExtension;
+			sourceTree = "<group>";
+		};
+		8C73FDBB2DB310720066E89E /* WorthMap */ = {
+			isa = PBXGroup;
+			children = (
+				8C73FDBC2DB3107D0066E89E /* WorthMap.swift */,
+				8C73FDBD2DB3107D0066E89E /* MapHandler.swift */,
+				8C73FDBE2DB3107D0066E89E /* WorthMapHelper.h */,
+				8C73FDBF2DB3107D0066E89E /* WorthMapHelper.mm */,
+			);
+			path = WorthMap;
 			sourceTree = "<group>";
 		};
 		97B4E9271851DAB300BEC5D7 /* Custom Views */ = {
@@ -4483,6 +4514,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C73FDC02DB310E30066E89E /* WorthMap.swift in Sources */,
+				8C73FDC12DB310E30066E89E /* MapHandler.swift in Sources */,
+				8C73FDC22DB310E30066E89E /* WorthMapHelper.h in Sources */,
+				8C73FDC32DB310E30066E89E /* WorthMapHelper.mm in Sources */,
+				8C73FDC42DB310E30066E89E /* WorthDeepLinkHandler.swift in Sources */,
 				ED914ABE2D351FF800973C45 /* UILabel+SetFontStyle.swift in Sources */,
 				34845DB71E166084003D55B9 /* Common.swift in Sources */,
 				47F4F21323A6EC420022FD56 /* DownloadMapsViewController.swift in Sources */,

@@ -56,10 +56,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>it.safetyisworth.navigator</string>
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>worthaddmap</string>
+				<string>worthnavigator</string>
 				<string>mapswithme</string>
 				<string>mapsme</string>
 				<string>ge0</string>

@@ -79,3 +79,9 @@
 #import "MWMSearchSuggestionCell.h"
 #import "MWMSearch.h"
 #import "SearchResult.h"
+
+// = = = = = = = = = = = =
+// WORTH NAVIGATOR UPDATE
+// add WorthMapHelper to bridging header
+#import "WorthMapHelper.h"
+// = = = = = = = = = = = =

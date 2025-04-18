@@ -28,6 +28,13 @@
 
     // On the hot start, link can be processed immediately.
     self.url = url
+    
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // handle worth deep links
+    WorthDeepLinkHandler.shared.handleInternal(deeplinkURL: url)
+    // = = = = = = = = = = = =
+
     return handleDeepLink(url: url)
   }
 
