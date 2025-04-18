@@ -93,13 +93,17 @@ class PlacePageCommonLayout: NSObject, IPlacePageLayout {
   private func configureViewControllers() -> [UIViewController] {
     var viewControllers = [UIViewController]()
 
-    viewControllers.append(wikiDescriptionViewController)
-    if let wikiDescriptionHtml = placePageData.wikiDescriptionHtml {
-      wikiDescriptionViewController.descriptionHtml = wikiDescriptionHtml
-      if placePageData.bookmarkData?.bookmarkDescription == nil {
-        wikiDescriptionViewController.view.isHidden = false
-      }
-    }
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // disable wikipedia
+    // viewControllers.append(wikiDescriptionViewController)
+    // if let wikiDescriptionHtml = placePageData.wikiDescriptionHtml {
+    //   wikiDescriptionViewController.descriptionHtml = wikiDescriptionHtml
+    //   if placePageData.bookmarkData?.bookmarkDescription == nil {
+    //     wikiDescriptionViewController.view.isHidden = false
+    //   }
+    // }
+    // = = = = = = = = = = = =
 
     // = = = = = = = = = = = =
     // WORTH NAVIGATOR UPDATE
