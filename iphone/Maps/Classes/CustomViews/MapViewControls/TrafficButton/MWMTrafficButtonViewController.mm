@@ -171,6 +171,12 @@ NSArray<UIImage *> *imagesWithName(NSString *name) {
   } else {
     btn.imageName = @"btn_layers";
   }
+  
+  // = = = = = = = = = = = =
+  // WORTH NAVIGATOR UPDATE
+  // disable layer button if btn_layers is the imageName
+  btn.hidden = [btn.imageName  isEqual: @"btn_layers"];
+  // = = = = = = = = = = = =
 }
 
 - (IBAction)buttonTouchUpInside {
