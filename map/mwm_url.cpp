@@ -421,8 +421,12 @@ InAppFeatureHighlightRequest::InAppFeatureType ParseInAppFeatureType(std::string
 {
   if (value == "track-recorder")
     return InAppFeatureHighlightRequest::InAppFeatureType::TrackRecorder;
-  if (value == "icloud")
-    return InAppFeatureHighlightRequest::InAppFeatureType::iCloud;
+  // = = = = = = = = = = = =
+  // WORTH NAVIGATOR UPDATE
+  // disiable icloud logging
+  // if (value == "icloud")
+  //   return InAppFeatureHighlightRequest::InAppFeatureType::iCloud;
+  // = = = = = = = = = = = =
   LOG(LERROR, ("Incorrect InAppFeatureType:", value));
   return InAppFeatureHighlightRequest::InAppFeatureType::None;
 }
