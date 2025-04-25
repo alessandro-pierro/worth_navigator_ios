@@ -944,32 +944,36 @@ void Storage::RegisterCountryFiles(LocalFilePtr localFile)
 
 void Storage::RegisterLocalFile(platform::LocalCountryFile const & localFile)
 {
-  LocalFilePtr ptr;
-
-  CountryId const & countryId = FindCountryId(localFile);
-  if (IsLeaf(countryId))
-  {
-    ptr = GetLocalFile(countryId, localFile.GetVersion());
-    if (!ptr)
+    LocalFilePtr ptr;
+    
+    CountryId const & countryId = FindCountryId(localFile);
+    if (IsLeaf(countryId))
     {
-      ptr = make_shared<LocalCountryFile>(localFile);
-      RegisterCountryFiles(ptr);
+        ptr = GetLocalFile(countryId, localFile.GetVersion());
+        if (!ptr)
+        {
+            ptr = make_shared<LocalCountryFile>(localFile);
+            RegisterCountryFiles(ptr);
+        }
     }
-  }
-  else
-  {
-    ptr = make_shared<LocalCountryFile>(localFile);
-    ptr->SyncWithDisk();
-    m_localFilesForFakeCountries[ptr->GetCountryFile()] = ptr;
-  }
-
-  uint64_t const size = ptr->GetSize(MapFileType::Map);
-  LOG(LINFO, ("Found file:", countryId, "in directory:", ptr->GetDirectory(), "with size:", size));
-
-  /// Funny, but ptr->GetCountryFile() has valid name only. Size and sha1 are not initialized.
-  /// @todo Store only name (CountryId) in LocalCountryFile instead of CountryFile?
-  if (m_currentVersion == ptr->GetVersion() && size != GetCountryFile(countryId).GetRemoteSize())
-    LOG(LERROR, ("Inconsistent MWM and version for", *ptr));
+    else
+    {
+        ptr = make_shared<LocalCountryFile>(localFile);
+        ptr->SyncWithDisk();
+        m_localFilesForFakeCountries[ptr->GetCountryFile()] = ptr;
+    }
+    
+    uint64_t const size = ptr->GetSize(MapFileType::Map);
+    LOG(LINFO, ("Found file:", countryId, "in directory:", ptr->GetDirectory(), "with size:", size));
+    
+    /// Funny, but ptr->GetCountryFile() has valid name only. Size and sha1 are not initialized.
+    /// @todo Store only name (CountryId) in LocalCountryFile instead of CountryFile?
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Disable tile size check
+    //  if (m_currentVersion == ptr->GetVersion() && size != GetCountryFile(countryId).GetRemoteSize())
+    //    LOG(LERROR, ("Inconsistent MWM and version for", *ptr));
+    // = = = = = = = = = = = =
 }
 
 void Storage::DeleteCountryFiles(CountryId const & countryId, MapFileType type, bool deferredDelete)
