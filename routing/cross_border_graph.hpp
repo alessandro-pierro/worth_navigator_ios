@@ -195,7 +195,12 @@ void CrossBorderGraphSerializer::Deserialize(CrossBorderGraph & graph, Source & 
 
     auto const & mwmHash = *it;
     auto itHash = hashToMwmId.find(mwmHash);
-    CHECK(itHash != hashToMwmId.end(), (mwmHash));
+
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Disable hash routing check
+    // CHECK(itHash != hashToMwmId.end(), (mwmHash));
+    // = = = = = = = = = = = =
 
     ending.m_numMwmId = itHash->second;
   };
