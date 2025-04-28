@@ -242,6 +242,7 @@ set(SRC
 
 omim_add_library(${PROJECT_NAME} ${SRC})
 
+find_package(EXPAT REQUIRED)
 target_link_libraries(${PROJECT_NAME}
   transit
   search
@@ -250,7 +251,7 @@ target_link_libraries(${PROJECT_NAME}
   descriptions
   indexer
   cppjansson
-  expat::expat
+  ${EXPAT_LIBRARIES}
   tess2
   $<$<BOOL:CMAKE_DL_LIBS>:${CMAKE_DL_LIBS}>  # dladdr from boost::stacktrace
 )

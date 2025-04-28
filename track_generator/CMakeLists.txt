@@ -8,11 +8,12 @@ set(SRC
 
 omim_add_executable(${PROJECT_NAME} ${SRC})
 
+find_package(EXPAT REQUIRED)
 target_link_libraries(${PROJECT_NAME}
   routes_builder
   routing
   kml
   coding
-  expat::expat
+  ${EXPAT_LIBRARIES}
   gflags::gflags
 )

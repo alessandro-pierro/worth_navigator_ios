@@ -93,9 +93,10 @@ set(SRC
 
 omim_add_library(${PROJECT_NAME} ${SRC})
 
+find_package(EXPAT REQUIRED)
 target_link_libraries(${PROJECT_NAME}
   base
-  expat::expat
+  ${EXPAT_LIBRARIES}
   cppjansson
   succinct
   ICU::uc

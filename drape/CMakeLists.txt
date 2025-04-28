@@ -174,6 +174,7 @@ if (PLATFORM_MAC)
   set_target_properties(${PROJECT_NAME} PROPERTIES XCODE_ATTRIBUTE_CLANG_ENABLE_OBJC_ARC YES)
 endif()
 
+find_package(EXPAT REQUIRED)
 set(DRAPE_LINK_LIBRARIES
   indexer
   platform
@@ -185,7 +186,7 @@ set(DRAPE_LINK_LIBRARIES
   stb_image
   harfbuzz::harfbuzz
   ICU::i18n
-  expat::expat
+  ${EXPAT_LIBRARIES}
   $<$<BOOL:${PLATFORM_MAC}>:-framework\ OpenGL>
   $<$<BOOL:${PLATFORM_MAC}>:-framework\ Metal>
   $<$<BOOL:${PLATFORM_LINUX}>:OpenGL::GL>

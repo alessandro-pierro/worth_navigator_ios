@@ -9,6 +9,7 @@ include_directories(${CMAKE_BINARY_DIR})
 
 omim_add_library(${PROJECT_NAME} MODULE ${SRC})
 
+find_package(EXPAT REQUIRED)
 omim_link_libraries(
   ${PROJECT_NAME}
   ${Boost_LIBRARIES}
@@ -23,7 +24,7 @@ omim_link_libraries(
   cppjansson
   protobuf
   pugixml
-  expat::expat
+  ${EXPAT_LIBRARIES}
   succinct
 )
 
