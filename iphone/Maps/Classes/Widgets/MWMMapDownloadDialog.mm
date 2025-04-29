@@ -19,19 +19,24 @@
 
 namespace {
 
-BOOL canAutoDownload(storage::CountryId const &countryId) {
-  if (![MWMSettings autoDownloadEnabled])
+  BOOL canAutoDownload(storage::CountryId const &countryId) {
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Alway prevent MWMS AUTO-DOWNLOAD
+    // if (![MWMSettings autoDownloadEnabled])
+    //   return NO;
+    // if (GetPlatform().ConnectionStatus() != Platform::EConnectionType::CONNECTION_WIFI)
+    //   return NO;
+    // CLLocation *lastLocation = [MWMLocationManager lastLocation];
+    // if (!lastLocation)
+    //   return NO;
+    // auto const &countryInfoGetter = GetFramework().GetCountryInfoGetter();
+    // if (countryId != countryInfoGetter.GetRegionCountryId(lastLocation.mercator))
+    //   return NO;
+    // return YES;
     return NO;
-  if (GetPlatform().ConnectionStatus() != Platform::EConnectionType::CONNECTION_WIFI)
-    return NO;
-  CLLocation *lastLocation = [MWMLocationManager lastLocation];
-  if (!lastLocation)
-    return NO;
-  auto const &countryInfoGetter = GetFramework().GetCountryInfoGetter();
-  if (countryId != countryInfoGetter.GetRegionCountryId(lastLocation.mercator))
-    return NO;
-  return YES;
-}
+    // = = = = = = = = = = = =
+  }
 }  // namespace
 
 using namespace storage;
@@ -106,9 +111,13 @@ using namespace storage;
         break;
       }
       case NodeStatus::Downloading:
-        if (nodeAttrs.m_downloadingProgress.m_bytesTotal != 0)
-          [self showDownloading:(CGFloat)nodeAttrs.m_downloadingProgress.m_bytesDownloaded /
-                                nodeAttrs.m_downloadingProgress.m_bytesTotal];
+        // = = = = = = = = = = = =
+        // WORTH NAVIGATOR UPDATE
+        // Prevent downloading
+        // if (nodeAttrs.m_downloadingProgress.m_bytesTotal != 0)
+        //   [self showDownloading:(CGFloat)nodeAttrs.m_downloadingProgress.m_bytesDownloaded /
+        //                         nodeAttrs.m_downloadingProgress.m_bytesTotal];
+        // = = = = = = = = = = = =
         break;
       case NodeStatus::Applying:
       case NodeStatus::InQueue:
@@ -195,8 +204,12 @@ using namespace storage;
 
 - (void)showDownloading:(CGFloat)progress {
   self.nodeSize.textColor = [UIColor blackSecondaryText];
-  self.nodeSize.text =
-    [NSString stringWithFormat:@"%@ %.2f%%", L(@"downloader_downloading"), progress * 100.f];
+  // = = = = = = = = = = = =
+  // WORTH NAVIGATOR UPDATE
+  // Disable downloader_downloading
+  //  self.nodeSize.text =
+  //    [NSString stringWithFormat:@"%@ %.2f%%", L(@"downloader_downloading"), progress * 100.f];
+  // = = = = = = = = = = = =
   self.downloadButton.hidden = YES;
   self.progressWrapper.hidden = NO;
   self.progress.progress = progress;
@@ -205,7 +218,11 @@ using namespace storage;
 
 - (void)showInQueue {
   self.nodeSize.textColor = [UIColor blackSecondaryText];
-  self.nodeSize.text = L(@"downloader_queued");
+  // = = = = = = = = = = = =
+  // WORTH NAVIGATOR UPDATE
+  // Disable downloader_queued
+  // self.nodeSize.text = L(@"downloader_queued");
+  // = = = = = = = = = = = =
   self.downloadButton.hidden = YES;
   self.progressWrapper.hidden = NO;
   self.progress.state = MWMCircularProgressStateSpinner;
