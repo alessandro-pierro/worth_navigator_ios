@@ -126,7 +126,11 @@ using namespace storage;
       case NodeStatus::Undefined:
       case NodeStatus::Error:
         if (p.IsAutoRetryDownloadFailed()) {
-          [self showError:nodeAttrs.m_error];
+          // = = = = = = = = = = = =
+          // WORTH NAVIGATOR UPDATE
+          // Disable show error
+          //  [self showError:nodeAttrs.m_error];
+          // = = = = = = = = = = = =
         } else {
           [self showInQueue];
         }
