@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -97,17 +97,17 @@
                     </connections>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYv-pG-Wkw" userLabel="Street name" customClass="NavigationStreetNameView" customModule="Organic_Maps" customModuleProvider="target">
-                    <rect key="frame" x="-100" y="0.0" width="1224" height="65"/>
+                    <rect key="frame" x="-100" y="0.0" width="1224" height="39"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WID-Um-Va6" userLabel="BackgroundView">
-                            <rect key="frame" x="-100" y="-100" width="1424" height="165"/>
+                            <rect key="frame" x="-100" y="-100" width="1424" height="139"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="StreetNameBackgroundView"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="600" verticalCompressionResistancePriority="600" text="Ленинградский проспект" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ShI-bz-5g8">
-                            <rect key="frame" x="204" y="24" width="900" height="29"/>
+                            <rect key="frame" x="204" y="0.0" width="900" height="29"/>
                             <accessibility key="accessibilityConfiguration">
                                 <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                             </accessibility>
@@ -388,6 +388,13 @@
                 <constraint firstAttribute="bottom" secondItem="Tzc-l6-Vvt" secondAttribute="bottom" priority="760" id="yP1-ip-l24"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="XMv-au-OYf"/>
+                    <exclude reference="TMW-aw-1RT"/>
+                    <exclude reference="Xna-Q1-7zW"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="bookmarksButton" destination="XMv-au-OYf" id="g3E-jo-X2E"/>
                 <outlet property="distanceToNextTurnLabel" destination="KuR-1J-VI2" id="n0i-t9-Vj2"/>
