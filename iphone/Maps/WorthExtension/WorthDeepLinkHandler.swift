@@ -31,7 +31,7 @@ fileprivate enum WorthDeepLinkType {
 enum WorthGlobal: String {
   case group_worth  = "group.safetyisworth"
   case scheme       = "worthapp"
-  case host         = "/"
+  case path         = "/"
   case maps_folder  = "190910"
 }
 
@@ -86,17 +86,17 @@ enum WorthSession: String {
     
     var components = URLComponents()
     components.scheme = WorthGlobal.scheme.rawValue
-    components.host   = WorthGlobal.host.rawValue
-    
+    components.path   = WorthGlobal.path.rawValue
+
     components.queryItems = [
       URLQueryItem(name: "code" , value: "\(code.rawValue)" ),
       URLQueryItem(name: "msg"  , value:    msg.raw()       ),
     ]
     
     if let url = URL(string: components.url!.absoluteString) {
-      if UIApplication.shared.canOpenURL(url) {
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-      }
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
   }
 

@@ -68,6 +68,10 @@ class BottomTabBarViewController: UIViewController {
     presenter.onMenuButtonPressed()
   }
   
+  @IBAction func onBackToNavigator(_ sender: Any) {
+    WorthDeepLinkHandler.shared.goingToWorth(code: WorthReturnCode.navigate_back, msg: WorthReturnMsg.home)
+  }
+  
   private func updateAvailableArea(_ frame:CGRect) {
     avaliableArea = frame
     updateFrame(animated: false)

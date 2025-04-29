@@ -77,6 +77,7 @@
 	<false/>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>worthapp</string>
 		<string>mailto</string>
 		<string>comgooglemaps</string>
 		<string>osmandmaps</string>

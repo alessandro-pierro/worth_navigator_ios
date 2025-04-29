@@ -76,6 +76,15 @@
                                 <action selector="onMenuButtonPressed:" destination="-1" eventType="touchUpInside" id="rzb-y4-nR1"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-Eu-8RR" userLabel="BackToNavigator" customClass="BottomTabBarButton" customModule="Organic_Maps" customModuleProvider="target">
+                            <rect key="frame" x="22.5" y="0.0" width="48" height="48"/>
+                            <accessibility key="accessibilityConfiguration" identifier="menuButton"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_menu_left"/>
+                            <connections>
+                                <action selector="onBackToNavigator:" destination="-1" eventType="touchUpInside" id="dyR-rs-leZ"/>
+                            </connections>
+                        </button>
                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uDI-ZC-4wx" userLabel="DownloadBadge">
                             <rect key="frame" x="329.5" y="11" width="10" height="10"/>
                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -116,12 +125,16 @@
                         <constraint firstItem="dgG-ki-3tB" firstAttribute="centerY" secondItem="vum-s3-PHx" secondAttribute="centerY" id="JjT-sc-hIY"/>
                         <constraint firstItem="svD-yi-GrZ" firstAttribute="centerX" secondItem="vum-s3-PHx" secondAttribute="centerX" multiplier="1.75" id="Q0b-gd-HwS"/>
                         <constraint firstItem="dgG-ki-3tB" firstAttribute="height" secondItem="vum-s3-PHx" secondAttribute="height" id="Rs8-Hl-CAc"/>
+                        <constraint firstItem="jFB-Eu-8RR" firstAttribute="height" secondItem="svD-yi-GrZ" secondAttribute="height" id="TB7-su-v2P"/>
+                        <constraint firstItem="jFB-Eu-8RR" firstAttribute="centerY" secondItem="svD-yi-GrZ" secondAttribute="centerY" id="U6k-Sh-p9f"/>
                         <constraint firstItem="uDI-ZC-4wx" firstAttribute="centerX" secondItem="svD-yi-GrZ" secondAttribute="centerX" constant="8" id="XNb-Ba-Hn7"/>
                         <constraint firstItem="dzf-7Z-N6a" firstAttribute="centerY" secondItem="vum-s3-PHx" secondAttribute="centerY" id="Zug-zY-KIX"/>
+                        <constraint firstItem="jFB-Eu-8RR" firstAttribute="width" secondItem="svD-yi-GrZ" secondAttribute="width" id="ffm-mk-kH8"/>
                         <constraint firstItem="0pe-0n-d1F" firstAttribute="centerY" secondItem="dzf-7Z-N6a" secondAttribute="centerY" constant="-8" id="pgw-rN-LCe"/>
                         <constraint firstItem="svD-yi-GrZ" firstAttribute="centerY" secondItem="vum-s3-PHx" secondAttribute="centerY" id="sja-hO-YY3"/>
                         <constraint firstItem="No0-ld-JX3" firstAttribute="centerX" secondItem="vum-s3-PHx" secondAttribute="centerX" multiplier="0.75" id="tDb-w1-ueQ"/>
                         <constraint firstItem="dzf-7Z-N6a" firstAttribute="centerX" secondItem="vum-s3-PHx" secondAttribute="centerX" multiplier="0.25" id="u3G-gY-98J"/>
+                        <constraint firstItem="jFB-Eu-8RR" firstAttribute="leading" secondItem="vum-s3-PHx" secondAttribute="leading" constant="22.5" id="vLF-8P-ufo"/>
                         <constraint firstItem="dzf-7Z-N6a" firstAttribute="height" secondItem="vum-s3-PHx" secondAttribute="height" id="yTg-8g-H1p"/>
                         <constraint firstItem="uDI-ZC-4wx" firstAttribute="centerY" secondItem="svD-yi-GrZ" secondAttribute="centerY" constant="-8" id="yq3-ui-IaL"/>
                     </constraints>
@@ -156,6 +169,7 @@
     <resources>
         <image name="ic_menu" width="48" height="48"/>
         <image name="ic_menu_bookmark_list" width="48" height="48"/>
+        <image name="ic_menu_left" width="48" height="48"/>
         <image name="ic_menu_search" width="48" height="48"/>
         <image name="logo" width="462" height="512"/>
     </resources>
