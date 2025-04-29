@@ -56,7 +56,11 @@ final class ActionBarViewController: UIViewController {
       case .onDiskOutOfDate, .onDisk, .undefined:
         break
       case .downloading, .applying, .inQueue, .error, .notDownloaded, .partly:
-        visibleButtons.append(.download)
+        // = = = = = = = = = = = =
+        // WORTH NAVIGATOR UPDATE
+        // Disable download button
+        // visibleButtons.append(.download)
+        // = = = = = = = = = = = =
         return
       @unknown default:
         fatalError()
