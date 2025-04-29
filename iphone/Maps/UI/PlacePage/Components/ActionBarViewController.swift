@@ -86,17 +86,35 @@ final class ActionBarViewController: UIViewController {
       buttons.append(.routeAddStop)
     }
     switch placePageData.objectType {
-    case .POI, .bookmark:
-      buttons.append(.bookmark)
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Disable bookmark button
+    // case .POI, .bookmark:
+    //   buttons.append(.bookmark)
+    // = = = = = = = = = = = =
     case .track:
       buttons.append(.track)
-    case .trackRecording:
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Add .POI and .bookmark to exclusion rule
+    // case .trackRecording:
+    case .POI, .bookmark, .trackRecording:
+    // = = = = = = = = = = = =
       // TODO: implement for track recording
       break
     @unknown default:
       fatalError()
     }
-    assert(buttons.count > 0)
+    
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Disable assertion and return before unhandled case
+    // assert(buttons.count > 0)
+    if(buttons.count == 0){
+      return;
+    }
+    // = = = = = = = = = = = =
+
     visibleButtons.append(buttons[0])
     if buttons.count > 1 {
       additionalButtons.append(contentsOf: buttons.suffix(from: 1))
