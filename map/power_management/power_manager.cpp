@@ -68,11 +68,19 @@ void PowerManager::Load()
   }
   catch (base::Json::Exception & ex)
   {
-    LOG(LERROR, ("Cannot deserialize power manager data from file. Exception:", ex.Msg()));
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Disable Error on power manager deserialization
+    // LOG(LERROR, ("Cannot deserialize power manager data from file. Exception:", ex.Msg()));
+    // = = = = = = = = = = = =
   }
   catch (FileReader::Exception const & ex)
   {
-    LOG(LWARNING, ("Cannot read power manager config file. Exception:", ex.Msg()));
+    // = = = = = = = = = = = =
+    // WORTH NAVIGATOR UPDATE
+    // Disable Error on power manager deserialization
+    // LOG(LWARNING, ("Cannot read power manager config file. Exception:", ex.Msg()));
+    // = = = = = = = = = = = =
   }
 
   // Reset to default state.
