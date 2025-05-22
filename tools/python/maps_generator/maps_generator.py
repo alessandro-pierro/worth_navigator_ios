@@ -1,4 +1,6 @@
 import logging
+import resource
+
 from typing import AnyStr
 from typing import Iterable
 from typing import Optional
@@ -7,6 +9,12 @@ from maps_generator.generator import stages_declaration as sd
 from maps_generator.generator.env import Env
 from maps_generator.generator.generation import Generation
 from .generator.stages import Stage
+
+
+# Increase max number of writable files
+soft, hard = resource.getrlimit(resource.RLIMIT_NOFILE)
+if soft < hard:
+    resource.setrlimit(resource.RLIMIT_NOFILE, (hard, hard))
 
 logger = logging.getLogger("maps_generator")
 

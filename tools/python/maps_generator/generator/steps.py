@@ -8,6 +8,7 @@ import os
 import shutil
 import subprocess
 from typing import AnyStr
+import resource
 
 from maps_generator.generator import settings
 from maps_generator.generator.env import Env
@@ -116,6 +117,11 @@ def step_preprocess(env: Env, **kwargs):
 
 
 def step_features(env: Env, **kwargs):
+    
+    # Increase max number of writable files
+    soft, hard = resource.getrlimit(resource.RLIMIT_NOFILE)
+    resource.setrlimit(resource.RLIMIT_NOFILE, (hard, hard))
+    
     if any(x not in WORLDS_NAMES for x in env.countries):
         kwargs.update({"generate_packed_borders": True})
     if any(x == WORLD_NAME for x in env.countries):
