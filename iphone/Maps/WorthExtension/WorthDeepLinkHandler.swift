@@ -32,7 +32,7 @@ enum WorthGlobal: String {
   case group_worth  = "group.safetyisworth"
   case scheme       = "worthapp"
   case path         = "/"
-  case maps_folder  = "190910"
+  case maps_folder  = "200101"
 }
 
 enum WorthSession: String {
