@@ -70,11 +70,15 @@ static CGFloat const kDrivingOptionsHeight = 48;
 {
   [self addProgress:self.vehicle imageName:@"ic_car" routerType:MWMRouterTypeVehicle];
   [self addProgress:self.pedestrian imageName:@"ic_pedestrian" routerType:MWMRouterTypePedestrian];
-  [self addProgress:self.publicTransport
-          imageName:@"ic_train"
-         routerType:MWMRouterTypePublicTransport];
-  [self addProgress:self.bicycle imageName:@"ic_bike" routerType:MWMRouterTypeBicycle];
-  [self addProgress:self.ruler imageName:@"ic_ruler_route" routerType:MWMRouterTypeRuler];
+  // = = = = = = = = = = = =
+  // WORTH NAVIGATOR UPDATE
+  // Disable navigation feature for: publicTransport, bicycle and ruler
+  // [self addProgress:self.publicTransport
+  //        imageName:@"ic_train"
+  //        routerType:MWMRouterTypePublicTransport];
+  // [self addProgress:self.bicycle imageName:@"ic_bike" routerType:MWMRouterTypeBicycle];
+  // [self addProgress:self.ruler imageName:@"ic_ruler_route" routerType:MWMRouterTypeRuler];
+  // = = = = = = = = = = = =
 }
 
 - (void)addProgress:(UIView *)parentView
