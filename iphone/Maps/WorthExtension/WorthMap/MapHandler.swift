@@ -26,8 +26,9 @@ import Foundation
           {
             self.store(withURL: map.path, name: map.name)
           }
-          registerMaps()
-        
+          DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.registerMaps()
+          }
       }catch{
         print("ERROR \(error)")
       }

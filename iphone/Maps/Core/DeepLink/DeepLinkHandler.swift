@@ -14,6 +14,9 @@
       isLaunchedByDeeplink = true
       url = launchDeeplink
     }
+        
+    // Ensure Worth map has been loaded
+    MapHandler.shared.loadFileFromDocumentsFolder()
   }
 
   func applicationDidOpenUrl(_ url: URL) -> Bool {
@@ -35,6 +38,7 @@
     WorthDeepLinkHandler.shared.handleInternal(deeplinkURL: url)
     // = = = = = = = = = = = =
 
+    
     return handleDeepLink(url: url)
   }
 
@@ -146,4 +150,5 @@
       return false;
     }
   }
+    
 }
